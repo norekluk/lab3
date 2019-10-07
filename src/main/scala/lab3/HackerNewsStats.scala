@@ -17,8 +17,8 @@ object HackerNewsStats extends App {
 
   val items = readAll("data/item")
 
-  // 0. how many news are there
+  // 1. how many news posts are there
   println("Number of news: " + items.size)
-  // 1. how many stories are there
+  // 2. how many stories are there
   println("Number of stories: " + items.filter(_.kind == "story").size)
 }
