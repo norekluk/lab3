@@ -5,7 +5,7 @@ trait List[+T] extends Serializable {
   def head: T
   def tail: List[T]
   def isEmpty: Boolean
-  def including[R >: T](e: R): List[R] = new Cons(e, Nil)
+  def including[R >: T](e: R): List[R] = new Cons(e, this)
 
   def foldLeft[R](acc: R)(f: (R, T) => R): R = ???
 
